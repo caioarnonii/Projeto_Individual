@@ -1,0 +1,538 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Racing+Sans+One&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+.background-image {
+    background-image: url(/img/kendal-hnysCJrPpkc-unsplash.jpg);
+    background-size: cover;
+    background-position: absolute;
+    background-repeat: no-repeat; 
+}
+
+.inicio {
+    width: 100%;
+    height: 740px;
+    background-color: rgb(255, 255, 255);
+}
+
+.img_footer {
+    width: 100%;
+    height: 83px;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.card_footer {
+    background-color: black;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_user {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-header {
+    width: auto;
+    height: 70px;
+}
+
+.card_footer1 {
+    height: auto;
+    width: auto;
+}
+
+.card_footer a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    height: 100px;
+    width: 284px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+  .user:hover {
+    transform: rotateY(180deg);
+  }
+
+.footer .card_footer::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card_footer:hover::after {
+    width: 50%;
+    color: #ffffff;
+  }
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+}
+
+.menu {
+    width: 100%;
+    height: 85vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+}
+
+.banner-inicio {
+    width: 60%;
+    height: 540px;
+}
+.foto-mj {
+    width: 100%;
+    height: 567px;
+}
+
+.texto_inicio {
+    width: 40%;
+    height: 540px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.texto_inicio h1 {
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.texto_inicio p {
+    font-size: 25px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.video-container {
+    width: 60%;
+    height: 100%;
+}
+.video-container video {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+}
+
+.foto_menu video {
+    width: 60%;
+    height: 100%;
+}
+.foto {
+    width: 100%;
+    height: 547px;
+}
+
+.btn_menu {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 142px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn_menu:hover {
+    width: 20%;
+    height: 50px;
+    transition: 500ms;
+}
+/* Fim da tela de Inicio */
+
+
+/* Começo da tela de Notícias */
+.noticias {
+    width: 100%;
+    height: 740px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.texto_noticias {
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.texto_noticias h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-left: 150px;
+    color: white;
+}
+
+.card_noticia {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card2 {
+    width: 600px;
+    height: 500px;
+    background-color: gray;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card2:hover {
+    width: 680px;
+    height: 550px;
+    transition: 1s;
+}
+
+
+.noticia1:hover {
+    width: 680px;
+    height: 550px;
+    transition: 1s;
+}
+
+.noticia1 {
+    width: 600px;
+    height: 500px;
+}
+
+.img-seta-esq {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    transform: rotateY(180deg)
+}
+
+
+.img-seta-dir {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.btn-seta {
+    background-color: #00000000;
+    border: none;
+}
+
+/* Fim da tela de Notícias */
+
+
+/* Inicio da tela de Seja Membro */
+.header-sejaMembro {
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.header-sejaMembro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-left: 150px;
+    color: white;
+}
+
+.banner-sejaMembro {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/img/logan-weaver-lgnwvr-xtPs2_MlPYc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.div-curry {
+    position: absolute;
+    left: 820px;
+}
+
+.card {
+    width: 462px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    border: 5px white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.logo-card {
+    position: absolute;
+    top: -30px;
+    left: -50px;
+}
+
+.img-logo-card {
+    height: 60px;
+}
+
+
+.sejaMembro-mj {
+    margin-top: 20px;
+    width: 90%;
+    height: 200px;
+    border-radius: 2px;
+}
+
+.div-btn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-seja-membro {
+    width: 100%;
+    height: 40px;
+    border: 0 solid;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: 200ms;
+}
+
+.btn-seja-membro:hover {
+    width: 115%;
+}
+
+.logo-nba {
+    position: absolute;
+    top: 430px;
+    left: -40px;
+}
+
+.foto-logo-nba {
+    height: 90px;
+}
+
+.div-lebron {
+    width: 50%;
+    height: 500px;
+}
+
+
+.header-fale {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+    .header-fale h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-left: 150px;
+    color: white;
+    }
+
+    .banner-fale {
+        width: 100%;
+        height: 650px;
+    }
+
+    .background-fale {
+        background-image: url("/assets/img/alp-duran-Hv-5rVWM7A4-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+        height: 700px; 
+    }
+
+    
+ .container{
+    max-width:450px;
+    margin:auto;
+    text-align:center;
+  }
+  .container *{
+    box-sizing:border-box;
+    border-radius:3px;
+  }
+  
+  .login-icon{
+    color:white;
+    font-size:30px;
+    font-weight:600;
+    margin:40px auto;
+  }
+  
+  .login-form{
+    background: #131111;
+    color:#565656;
+    padding:40px;
+    margin-top: 70px;
+  }
+  
+  .login-form .login-title{
+    font-size:38px;
+    font-weight:300;
+    margin:0px 0px 45px 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .login-form .login-input{
+    display:block;
+    margin: 20px auto;
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    border: 2px solid #e7e7e7;
+    background:#fcfcfc;
+  }
+  
+
+  .login-form .login-inputDesc{
+    display:block;
+    margin: 20px auto;
+    width:100%;
+    height: 100px;
+    padding:15px;
+    font-size:18px;
+    border: 2px solid #e7e7e7;
+    background:#fcfcfc;
+  }
+
+  .login-form .login-input.button{
+    border:none;
+    color:white;
+    background:#000000;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .login-signup{
+    color:#FFF;
+    margin:20px 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .login-signup a{
+    color:#FFF;
+    font-weight:600;
+  }
+
+
+  /* Rodapé do Site */
+
+
+  .container-footer {
+    width: 100%;
+    height: 22vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagens-footer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content:flex-end
+
+  }
+
+  .insta {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .face {
+    margin-top: 20px;
+    margin-right: 7px;
+    width: 40px;
+    height: 40px;
+  }
+
+ .twitter {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .logo-texto {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+  .logo-footer {
+    width: 100px;
+    height: 50px;
+  }
+
+  .texto-footer {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }

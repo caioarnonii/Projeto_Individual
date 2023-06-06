@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="dashboardQM.css">
+    <link rel="shortcut icon" href="assets/img/logopequena 1.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="nav-bar">
+            <div class="logo-menu"><img class="img-logo-menu" src="" alt=""></div>
+            <div class="foto-user"><img class="img-foto-user" src="assets/img/logo-user.png" alt=""></div>
+            <div class="h3-nav">
+                <h3>Olá <span class="nome-usuario" id="nome_usuario"></span>!</h3>
+            </div>
+            <div class="container-btn">
+                <div class="btn">
+                    <a class="a" href="#telaJogadores">
+                        <p class="texto-btn">Jogadores</p>
+                    </a>
+                </div>
+                <div class="btn">
+                    <a class="a" href="#tela-grafico1">
+                        <p class="texto-btn">Gráficos</p>
+                    </a>
+                </div>
+                <div class="btn-sair">
+                    <a class="a">
+                        <button class="button-sair" onclick="limparSessao()">
+                            <p class="texto-btn">Sair</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="container-logo"><img class="foto-container-logo" src="assets/img/logopequena 1.png" alt="">
+            </div>
+        </div>
+
+        <div id="telaJogadores" class="tela1">
+            <div class="texto-tela1">
+                <h1>Qual seu Jogador Favorito?</h1>
+            </div>
+            <div class="container-jogadores">
+                <div class="card">
+                    <div class="foto-jogador">
+                        <img class="foto-lebron" src="assets/img/lebron.png" alt="">
+                    </div>
+                    <div class="texto-card">
+                        <p class="texto-card">Lebron James <br><br>
+                            ° 2,06 m <br><br>
+                            ° 113kg <br><br>
+                            ° 38 anos <br><br>
+                            ° Ala <br><br>
+                            ° Los Angeles Lakers
+                        </p>
+                    </div>
+                    <div class="container-btn2">
+                        <div class="btn-card">
+                            <button class="btn-votar" onclick="votoLebron()">
+                                <p class="p-card">Votar</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="foto-jogador"><img class="foto-curry" src="assets/img/curry (2).png" alt="">
+                    </div>
+                    <div class="texto-card">
+                        <p class="texto-card">Stephen Curry <br><br>
+                            ° 1,88 m <br><br>
+                            ° 83kg <br><br>
+                            ° 35 anos <br><br>
+                            ° Armador <br><br>
+                            ° Golden State Warriors
+                        </p>
+                    </div>
+                    <div class="container-btn2">
+                        <div class="btn-card">
+                            <button class="btn-votar" onclick="votoCurry()">
+                                <p class="p-card">Votar</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="foto-jogador">
+                        <img class="foto-giannis" src="assets/img/giannis.png" alt="">
+                    </div>
+                    <div class="texto-card">
+                        <p class="texto-card">Giannis Antetokounmpo <br><br>
+                            ° 2,11 m <br><br>
+                            ° 110kg <br><br>
+                            ° 28 anos <br><br>
+                            ° Ala Pivô <br><br>
+                            ° Milwaukee Bucks
+                        </p>
+                    </div>
+                    <div class="container-btn2">
+                        <div class="btn-card">
+                            <button class="btn-votar" onclick="votoGiannis()">
+                                <p class="p-card">Votar</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div id="tela-grafico1" class="texto-tela2">
+            <h1>Estatísticas da Temporada</h1>
+        </div>
+        <div class="chart">
+            <canvas height="1000px" width="1000px" margin-left="1000px" class="grafico1" id="myChart"
+                style="display: block; box-sizing: border-box; height: 443px; width: 664px;"></canvas>
+            <div class="container-kpis">
+                <div class="bordaKpi">
+                    <h2 class="h2Kpi">Média de Pontos</h2>
+                </div>
+                <div class="kpi">
+                    <h1 id="kpiPontos" class="h1Kpi"></h1>
+                </div>
+                <div class="bordaKpi">
+                    <h2 class="h2Kpi">Média de Assistências</h2>
+                </div>
+                <div class="kpi">
+                    <h1 id="kpiAssistencias" class="h1Kpi"></h1>
+                </div>
+                <div class="bordaKpi">
+                    <h2 class="h2Kpi">Média de Rebotes</h2>
+                </div>
+                <div class="kpi">
+                    <h1 id="kpiRebotes" class="h1Kpi"></h1>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section3">
+        <div id="tela-grafico1" class="texto-tela2">
+            <h1>Votos dos Usuários</h1>
+        </div>
+        <div class="container-chart2">
+            <canvas style="max-height: 450px; max-width: 450px;" class="grafico2" id="myChart2"></canvas>
+        </div>
+    </section>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboardQN.js"></script>
+<script>
+    nome_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    validarSessao();
+    atualizarGrafico();
+    function votoLebron() {
+        kpiPontos.innerHTML = `28,9`
+        kpiAssistencias.innerHTML = `6,5`
+        kpiRebotes.innerHTML = `8,3`
+
+        graficoLebron();
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var idJogador = 1;
+
+        votarJogador(idUsuario, idJogador);
+    }
+
+    function votoCurry() {
+        kpiPontos.innerHTML = `29,4`
+        kpiAssistencias.innerHTML = `6,3`
+        kpiRebotes.innerHTML = `6,1`
+
+        graficoCurry();
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var idJogador = 2;
+
+        votarJogador(idUsuario, idJogador);
+    }
+
+    function votoGiannis() {
+        kpiPontos.innerHTML = `31,1`
+        kpiAssistencias.innerHTML = `5,7`
+        kpiRebotes.innerHTML = `11,8`
+
+        graficoGiannis();
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var idJogador = 3;
+
+        votarJogador(idUsuario, idJogador);
+
+    }
+
+    function votarJogador(idUsuario, idJogador) {
+        fetch(`/Jogador/votar`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idJogadorServer: idJogador,
+                idUsuarioServer: idUsuario,
+            })
+        })
+            .then(
+                function (resposta) {
+                    if (resposta.ok) {
+                        // buscarEstatisticas(idJogador)
+                    }
+                })
+            .catch()
+    }
+
+    function graficoLebron() {
+        const ctx = document.getElementById('myChart');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' , '12' , '13' , '14' , '15' , '16' , '17' , '18' , '19' , '20' , '21' , '22' , '23' , '24' , '25' , '26' , '27' , '28' , '29' , '30' , '31' , '32' , '33' , '34' , '35' , '36' , '37' , '38' , '39' , '40' , '41' , '42' , '43' , '44' , '45' , '46' , '47' , '48' , '49' , '50'],
+                datasets: [{
+                    label: 'Pontos por Partida',
+                    data: [36, 16, 33, 37, 18, 18, 25, 19, 26, 13, 21, 38, 27, 26, 28, 41, 20, 46, 37, 23, 32, 48, 35, 24, 37, 25, 43, 47, 27, 28, 38, 34, 31, 33, 30, 33, 35, 23, 21, 29, 28, 31, 21, 39, 21, 30, 27, 17, 20, 26],
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        max:6,
+                        min:0
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true
+                            },
+                            pinch: {
+                                enabled: true
+                            },
+                            mode: 'xy'
+                        },
+                        pan: {
+                            enabled: true,
+                            mode: 'xy'
+                        }
+                    }
+                }
+            }
+        });
+        const chartElement = document.getElementById("chart")
+        chartElement.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                if (chart.options.scales.x.max >= chart.data.datasets[0].data.length - 1) {
+                    chart.options.scales.x.min = chart.data.datasets[0].data.length - 6;
+                    chart.options.scales.x.max = chart.data.datasets[0].data.length - 1;
+                } else {
+                    chart.options.scales.x.min += 1;
+                    chart.options.scales.x.max += 1;
+                }
+            } else if (e.deltaY < 0) {
+                if (chart.options.scales.x.min <= 0) {
+                    chart.options.scales.x.min = 0;
+                    chart.options.scales.x.max = 5;
+                } else {
+                    chart.options.scales.x.min -= 1;
+                    chart.options.scales.x.max -= 1;
+                }
+            }
+            chart.update()
+        })
+    }
+
+    function graficoCurry() {
+        const ctx = document.getElementById('myChart');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' , '12' , '13' , '14' , '15' , '16' , '17' , '18' , '19' , '20' , '21' , '22' , '23' , '24' , '25' , '26' , '27' , '28' , '29' , '30' , '31' , '32' , '33' , '34' , '35' , '36' , '37' , '38' , '39' , '40' , '41' , '42' , '43' , '44' , '45' , '46' , '47' , '48' , '49' , '50'],
+                datasets: [{
+                    label: 'Pontos por Partida',
+                    data: [26, 25, 34, 21, 33, 39, 20, 29, 20, 30, 16, 31, 50, 23, 36, 29, 40, 27, 21, 28, 29, 28, 35, 34, 26, 29, 41, 20, 15, 24, 38, 20, 32, 12, 30, 19, 32, 25, 33, 22, 33, 24, 50, 16, 27, 40, 47, 39, 23, 32],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x:{
+                        max:6,
+                        min:0
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const chartElement = document.getElementById("chart")
+        ctx.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                if (chart.options.scales.x.max >= chart.data.datasets[0].data.length - 1) {
+                    chart.options.scales.x.min = chart.data.datasets[0].data.length - 6;
+                    chart.options.scales.x.max = chart.data.datasets[0].data.length - 1;
+                } else {
+                    chart.options.scales.x.min += 1;
+                    chart.options.scales.x.max += 1;
+                }
+            } else if (e.deltaY < 0) {
+                if (chart.options.scales.x.min <= 0) {
+                    chart.options.scales.x.min = 0;
+                    chart.options.scales.x.max = 5;
+                } else {
+                    chart.options.scales.x.min -= 1;
+                    chart.options.scales.x.max -= 1;
+                }
+            }
+            chart.update()
+        })
+    }
+
+
+    function graficoGiannis() {
+        const ctx = document.getElementById('myChart');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' , '12' , '13' , '14' , '15' , '16' , '17' , '18' , '19' , '20' , '21' , '22' , '23' , '24' , '25' , '26' , '27' , '28' , '29' , '30' , '31' , '32' , '33' , '34' , '35' , '36' , '37' , '38' , '39' , '40' , '41' , '42' , '43' , '44' , '45' , '46' , '47' , '48' , '49' , '50'],
+                datasets: [{
+                    label: 'Pontos por Partida',
+                    data: [28, 33, 24, 38, 31, 24, 31, 22, 25, 36, 46, 23, 34, 31, 33, 4, 2, 2, 36, 35, 38, 24, 35, 54, 34, 50, 41, 33, 29, 7, 22, 9, 30, 55, 43, 45, 27, 26, 45, 42, 19, 30, 16, 28, 35, 34, 40, 37, 30, 38],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        max:6,
+                        min:0
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        ctx.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                if (chart.options.scales.x.max >= chart.data.datasets[0].data.length - 1) {
+                    chart.options.scales.x.min = chart.data.datasets[0].data.length - 6;
+                    chart.options.scales.x.max = chart.data.datasets[0].data.length - 1;
+                } else {
+                    chart.options.scales.x.min += 1;
+                    chart.options.scales.x.max += 1;
+                }
+            } else if (e.deltaY < 0) {
+                if (chart.options.scales.x.min <= 0) {
+                    chart.options.scales.x.min = 0;
+                    chart.options.scales.x.max = 5;
+                } else {
+                    chart.options.scales.x.min -= 1;
+                    chart.options.scales.x.max -= 1;
+                }
+            }
+            chart.update()
+        })
+    }
+
+</script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="assets/img/logopequena 1.png" type="image/x-icon">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <div class="footer">
+        <ul>
+            <li class="card_footer1"><img class="logo-header" src="assets/img/logopequena 1.png" alt=""></li>
+            <li class="card_footer"><a href="index.html">HOME</a></li>
+            <li class="card_footer"><a href="sobrenos.html">SOBRE NÓS</a></li>
+            <li class="card_footer"><a href="#fale-conosco">FALE CONOSCO</a></li>
+            <li class="card_footer"><a href="#seja-membro">SEJA MEMBRO</a></li>
+            <li class="card_user"><a href="cadastro.html"><img class="user" src="assets/img/user.png"
+                        alt="Cadastro"></a>
+
+        </ul>
+    </div>
+    <div class="menu">
+        <div class="texto_inicio">
+            <h1>Quadra News</h1>
+            <p>
+                O Quadra News é um site sobre o mundo da NBA (National Basketball Association) onde contém
+                informações, notícias e tudo de primeira mão sobre o universo do basquete americano.
+            </p>
+            <a class="btn_menu" href="sobrenos.html">SAIBA MAIS</a>
+        </div>
+        <div class="banner-inicio">
+            <img class="foto-mj " src="assets/img/pxfuel.jpg" alt="">
+        </div>
+
+    </div>
+    <div class="noticias">
+        <div class="texto_noticias">
+            <h1>Notícias</h1>
+        </div>
+        <div class="card_noticia">
+            <button class="btn-seta" id="btn-esq" onclick="trocar()" ><div class="seta-esq"><img class="img-seta-esq" src="assets/img/seta-direita.png" alt=""></div></button>
+            <a target="_blank" href="https://ge.globo.com/basquete/nba/">
+                <div class="card2"><img id="imagem1" class="noticia1" src="assets/img/image 19.png" alt=""></div>
+            </a>
+            <button class="btn-seta" id="btn-dir" onclick="trocar()"><div class="seta-dir"><img class="img-seta-dir" src="assets/img/seta-direita.png" alt=""></div></button>
+        </div>
+    </div>
+    <!-- Seja Membro -->
+    <div id="seja-membro" class="header-sejaMembro">
+        <h1>Seja Membro</h1>
+    </div>
+    <div class ="banner-sejaMembro">
+        <div class="card">
+            <img class="sejaMembro-mj" src="assets/img/image 17.png" alt="" srcset="">
+            <div class="logo-card"><img class="img-logo-card" src="assets/img/logopequena 1.png" alt=""></div>
+            <div class="texto-card">
+                <img src="assets/img/card_seja_membro.PNG" alt="">
+            </div>
+            <div class="div-btn">
+                <a href="cadastro.html"><button class="btn-seja-membro"><b>Cadastre-se</b></button></a>
+            </div>
+            <div class="logo-nba"><img class="foto-logo-nba" src="assets/img/image 6.png" alt=""></div>
+        </div>
+    </div>
+    <!-- Fale Conosco -->
+    <div class="background-fale" id="fale-conosco">
+        <div class="header-fale">
+            <h1>Fale Conosco</h1>
+        </div>
+        <div class="container">
+            <div class="login-icon">
+            </div>
+            <div class="login-form">
+                <div class="login-title">
+                    Fale Conosco
+                </div>
+                <div class="login-input-parts">
+                    <input class="login-input" type="text" placeholder="Email" />
+                    <input class="login-input" type="text" placeholder="Assunto" />
+                    <input class="login-inputDesc" type="text" placeholder="Descrição" />
+                    <button class="login-input button" onclick="faleconosco()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-footer">
+        <div class="imagens-footer">
+            <img class="insta" src="assets/img/image 11.png" alt="">
+            <img class="face" src="assets/img/image 12.png" alt="">
+            <img class="twitter" src="assets/img/image 13.png" alt="">
+        </div>
+        <img class="logo-footer" src="assets/img/logopequena 1.png" alt="">
+        <div class="logo-texto">
+            <p class="texto-footer">Quadra News © 2023. Todos os direitos reservados. Desenvolvido por Quadra News.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var imagem1 = 'assets/img/image 19.png'
+    var imagem2 = 'assets/img/image 4.png'
+    var imagem3 = 'assets/img/image 23.png'
+
+    function trocar() {
+        document.getElementById("imagem1").src = imagem1
+        let aux = imagem1
+        imagem1 = imagem2
+        imagem2 = aux
+        let aux2 = imagem2
+        imagem2 = imagem3
+        imagem3 = aux2
+    }
+
+   
+    
+</script>
